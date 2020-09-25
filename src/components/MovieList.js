@@ -1,52 +1,19 @@
 import React, {useState, useEffect} from 'react'
 import AboutMovie from './AboutMovie'
+import { Link } from 'react-router-dom';
 
-function MovieList() {
-  
+const MovieList = ({ movie }) => {
+
     return (
-       <div className="movies">
-       <div className= "row pt-5">
-       <div className= "col-md-3">
-            <img className="img-fluid" src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="blade-runner" className="img-fluid" />
-            <div className="movies__detail">
-                <h3 className="movies__detail__title">blade Runner</h3>
-                <p className="movies__detail__released">2020</p>
+        <div className= "col-md-3">  
+                <Link to={`/AboutMovie/${movie.id}`}>
+                    <img className="img-fluid" src={movie.medium_cover_image}  alt={movie.title_long}  />
+                </Link>
+                <h3 className='movies__title'>{movie.title}</h3>
+                <p className="movies__year">{movie.year}</p>
+                <br />
+                <br />
             </div>
-        </div>
-
-        <div className= "col-md-3">
-            <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="blade-runner" className="img-fluid" />
-            <div className="movies__detail">
-                <h3 className="movies__detail__title">blade Runner</h3>
-                <p className="movies__detail__released">2020</p>
-            </div>
-        </div>
-
-        <div className= "col-md-3">
-            <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="blade-runner" className="img-fluid" />
-            <div className="movies__detail">
-                <h3 className="movies__detail__title">blade Runner</h3>
-                <p className="movies__detail__released">2020</p>
-            </div>
-        </div>
-
-        <div className= "col-md-3">
-            <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="blade-runner" className="img-fluid" />
-            <div className="movies__detail">
-                <h3 className="movies__detail__title">blade Runner</h3>
-                <p className="movies__detail__released">2020</p>
-            </div>
-        </div>
-
-        <div className= "col-md-3">
-            <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="blade-runner" className="img-fluid" />
-            <div className="movies__detail">
-                <h3 className="movies__detail__title">blade Runner</h3>
-                <p className="movies__detail__released">2020</p>
-            </div>
-        </div>
-        </div>
-    </div>
     )
 }
 

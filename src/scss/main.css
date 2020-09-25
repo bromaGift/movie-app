@@ -9,31 +9,59 @@
 }
 
 body {
-  background: #e5e5e5;
+  background-color: #19181F;
+}
+
+section {
+  padding: 25px;
+}
+
+section .searchbox {
+  display: block;
+  width: 40%;
+  padding: 6px;
+  margin: 10px auto;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: #EEE;
+  border-radius: 8px;
+  color: #53565A;
+  font-size: 20px;
+  font-weight: 300;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+section .searchbox:focus {
+  -webkit-box-shadow: 0px 0px 8px 3px #2b8d67;
+          box-shadow: 0px 0px 8px 3px #2b8d67;
 }
 
 .movies {
   max-width: 1440px;
-  background: #19181F;
-  padding: 30px 36px;
-  margin: 0 auto;
+  margin: 40px auto;
+  border-radius: 4px;
+  padding: 32px;
 }
 
 .movies img {
-  width: 215px;
-  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-box-shadow: 0px 4px 24px 3px rgba(0, 0, 0, 0.43);
-          box-shadow: 0px 4px 24px 3px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 0px 4px 24px 3px rgba(92, 163, 163, 0.43);
+          box-shadow: 0px 4px 24px 3px rgba(92, 163, 163, 0.43);
   border-radius: 10px;
 }
 
-.movies__detail {
-  padding: 15px;
+.movies img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-.movies__detail__title {
+.movies__title {
+  margin-top: 15px;
   color: #FFFFFF;
   margin-left: 5px;
   padding-top: 5px;
@@ -41,22 +69,29 @@ body {
   font-size: 20px;
 }
 
-.movies__detail__released {
+.movies__year {
   color: #FFFFFF;
   margin-left: 5px;
   font-weight: 300;
   font-size: 20px;
 }
 
+.movies button {
+  margin: 20px auto;
+  background-color: #cebfbf;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+  font-size: 300;
+  border-radius: 6px;
+}
+
 .about-movie {
-  max-width: 1450px;
-  background: #19181F;
-  padding: 50px;
+  max-width: 1440px;
+  margin: 40px auto;
+  padding: 32px;
 }
 
 .about-movie img {
-  width: 400px;
-  height: 580px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-box-shadow: 0px 4px 24px 3px rgba(0, 0, 0, 0.43);
@@ -65,7 +100,7 @@ body {
 }
 
 .about-movie__all {
-  padding-top: 140px;
+  padding-top: 80px;
   color: #fff;
 }
 
@@ -75,7 +110,7 @@ body {
   line-height: 59px;
 }
 
-.about-movie__all__released {
+.about-movie__all__year {
   font-weight: 300;
   font-size: 27px;
   line-height: 37px;
@@ -86,5 +121,17 @@ body {
   font-size: 27px;
   line-height: 37px;
   margin-bottom: 30px;
+}
+
+.about-movie__all__description {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.about-movie button {
+  margin: 20px;
+  background-color: #cebfbf;
+  padding: 10px 22px 10px 22px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=main.css.map */

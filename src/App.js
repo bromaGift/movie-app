@@ -1,27 +1,23 @@
-import React from 'react';
-import './scss/main.scss'
-import MovieList from './components/MovieList';
+import React, {useState, useEffect} from 'react'
+import yts from './axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AboutMovie from './components/AboutMovie';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
+import './scss/main.scss'
+import Movies from './components/Movies';
+import AboutMovie from './components/AboutMovie';
+
+const  App = () => {
+
 
   return (
+    <div className='main'>
     <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/About" component={AboutMovie} />
-        </Switch>
-      </div>
+        <Route path='/' exact component={Movies} />
+        <Route path='/AboutMovie/:id' component={AboutMovie} />
     </Router>
+</div>
   );
 }
 
-const Home = () => (
-  <div>
-   <MovieList />
-  </div>
-)
 export default App;
