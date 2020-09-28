@@ -1,14 +1,12 @@
-import React, {useState, useEffect} from 'react'
-import yts from './axios';
+import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router,  Route } from 'react-router-dom';
 
 import './scss/main.scss'
 import Movies from './components/Movies';
 import AboutMovie from './components/AboutMovie';
 
 const  App = () => {
-
 
   return (
     <div className='main'>

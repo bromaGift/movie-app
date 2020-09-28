@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import yts from '../axios';
 import { Link } from 'react-router-dom';
 
@@ -6,11 +6,9 @@ const AboutMovie = ({ match }) => {
     const movie_id = match.params.id;
     const [movieDetail, setMovieDetail] = useState([]);
     const [genres, setGenres] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         (async () => {
-            setIsLoading(true);
             const fetchMovieDetails = await yts.get(`api/v2/movie_details.json/`, {
                 params: {
                     movie_id,
@@ -20,7 +18,6 @@ const AboutMovie = ({ match }) => {
             setMovieDetail(fetchMovieDetails.data.data.movie);
             setGenres(fetchMovieDetails.data.data.movie.genres);
 
-            setIsLoading(false);
         }) ();
     },[movie_id] )
 

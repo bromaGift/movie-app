@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react'
-import AboutMovie from './AboutMovie'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
 const MovieList = ({ movie }) => {

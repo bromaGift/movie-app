@@ -27,7 +27,6 @@ const fetchMovieList = async (page, limit) => {
   }
 };
 
-
 const  Movies = () => {
 
     const limit = 12;
