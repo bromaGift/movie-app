@@ -13,7 +13,7 @@ import MovieList from './MovieList';
   
 const fetchMovieList = async (page, limit) => {
   try {
-      let { data: res } = await yts.get(`https://yts.mx/api/v2/list_movies.json/`, {
+      let { data: res } = await yts.get(`https://yts.mx/api/v2/list_movies.json/?quality=3D`, {
           params: {
               page,
               limit,
