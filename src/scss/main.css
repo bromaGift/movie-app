@@ -12,32 +12,6 @@ body {
   background-color: #19181F;
 }
 
-section {
-  padding: 25px;
-}
-
-section .searchbox {
-  display: block;
-  width: 40%;
-  padding: 6px;
-  margin: 10px auto;
-  border: none;
-  outline: none;
-  background: none;
-  background-color: #EEE;
-  border-radius: 8px;
-  color: #53565A;
-  font-size: 20px;
-  font-weight: 300;
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
-}
-
-section .searchbox:focus {
-  -webkit-box-shadow: 0px 0px 8px 3px #2b8d67;
-          box-shadow: 0px 0px 8px 3px #2b8d67;
-}
-
 .movies {
   max-width: 1440px;
   margin: 40px auto;
